@@ -1,5 +1,5 @@
 <template>
-  <main class="container text-white">
+  <main class="max-w-screen-md self-center text-white w-11/12">
     <div class="pt-4 mb-8 relative">
       <input
         v-model="searchQuery"
@@ -10,7 +10,7 @@
       />
       <ul
         v-if="mapboxSearchResults"
-        class="absolute bg-weather-secondary text-white w-full shadow-md py-2 px-5 top[66px]"
+        class="absolute bg-weather-secondary text-white w-full shadow-md py-2 px-5 top-[66px]"
       >
         <p v-if="searchError">Sorry, something went wrong, please try again.</p>
         <p v-if="!serverError && mapboxSearchResults.length === 0">
@@ -28,6 +28,16 @@
         </template>
       </ul>
     </div>
+
+    <div class="flex flex-col gap-4">
+      <Suspense>
+        <CityList />
+
+        <template #fallback>
+          <CityCardSkeleton />
+        </template>
+      </Suspense>
+    </div>
   </main>
 </template>
 
@@ -35,10 +45,11 @@
 import { ref } from "vue";
 import axios from "axios";
 import { useRouter } from "vue-router";
+import CityList from "@/components/CityList.vue";
+import CityCardSkeleton from "@/components/CityCardSkeleton.vue";
 
 const router = useRouter();
 const previewCity = (searchResult) => {
-  console.log(searchResult);
   const [city, state] = searchResult.place_name.split(",");
   router.push({
     name: "cityView",
