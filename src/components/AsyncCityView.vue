@@ -29,11 +29,11 @@
         }}
       </p>
       <h1 class="text-6xl sm:text-8xl mb-8">
-        {{ Math.round(weatherData.current.temp) }}&deg;
+        {{ Math.round(weatherData.current.temp) }}&deg;F
       </h1>
       <div class="text-center">
         <p class="text-xs sm:text-sm mb-2">
-          Feels like {{ weatherData.current.feels_like }}
+          Feels like {{ weatherData.current.feels_like }} &deg;F
         </p>
         <p class="capitalize text-xs sm:text-sm">
           {{ weatherData.current.weather[0].description }}
@@ -72,7 +72,7 @@
               :src="`http://openweathermap.org/img/wn/${hourData.weather[0].icon}@2x.png`"
               alt=""
             />
-            <p class="text-sm mb-2">{{ Math.round(hourData.temp) }}&deg;</p>
+            <p class="text-sm mb-2">{{ Math.round(hourData.temp) }}&deg;F</p>
           </div>
         </div>
       </div>
@@ -102,8 +102,8 @@
             alt=""
           />
           <div class="flex gap-2 flex-1 justify-end">
-            <p class="text-sm">H: {{ Math.round(day.temp.max) }}</p>
-            <p class="text-sm">L: {{ Math.round(day.temp.min) }}</p>
+            <p class="text-sm">H: {{ Math.round(day.temp.max) }} &deg;F</p>
+            <p class="text-sm">L: {{ Math.round(day.temp.min) }} &deg;F</p>
           </div>
         </div>
       </div>

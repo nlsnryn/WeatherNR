@@ -123,7 +123,7 @@ watch(
               Search for your city by entering the name into the search bar.
             </li>
             <li>
-              Select the city within the results, ths will take you to the
+              Select the city within the results, this will take you to the
               current weather selection.
             </li>
             <li>

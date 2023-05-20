@@ -11,11 +11,11 @@
 
     <div class="flex flex-col gap-1 sm:gap-2">
       <h1 class="text-sm sm:text-xl self-end">
-        {{ city.weather.main.temp }} &deg;
+        {{ city.weather.main.temp }} &deg;F
       </h1>
       <div class="flex gap-2">
-        <span class="text-xs">H: {{ city.weather.main.temp_max }}</span>
-        <span class="text-xs">L: {{ city.weather.main.temp_min }}</span>
+        <span class="text-xs">H: {{ city.weather.main.temp_max }} &deg;F</span>
+        <span class="text-xs">L: {{ city.weather.main.temp_min }} &deg;F</span>
       </div>
     </div>
   </div>
