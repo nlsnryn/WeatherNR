@@ -1,13 +1,15 @@
 <template>
   <div
-    class="flex justify-between items-center bg-weather-secondary py-4 px-4 rounded-md shadow-md cursor-pointer"
+    class="flex justify-between items-center bg-weather-secondary py-2 px-4 sm:py-4 sm:px-4 rounded-md shadow-md cursor-pointer"
   >
     <div class="flex flex-col">
-      <h1 class="text-2xl">{{ city.city }}</h1>
-      <h1 class="font-medium tracking-wide">{{ city.state }}</h1>
+      <h1 class="text-base sm:text-2xl">{{ city.city }}</h1>
+      <h1 class="text-xs sm:text-sm font-medium tracking-wide">
+        {{ city.state }}
+      </h1>
     </div>
 
-    <div class="sm:flex flex-col gap-2 hidden">
+    <div class="flex flex-col gap-1 sm:gap-2">
       <h1 class="text-sm sm:text-xl self-end">
         {{ city.weather.main.temp }} &deg;
       </h1>

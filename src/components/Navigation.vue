@@ -130,6 +130,11 @@ watch(
               Track the city by clicking on "+" icon in the right. This will
               save to view at a later time on the home page.
             </li>
+            <li>
+              If you want to go back in Home page to search another
+              location/city or to view your tracked location kindly click the
+              "The Local Weather" logo.
+            </li>
           </ol>
           <h2 class="text-xl sm:text-2xl">Removing a city</h2>
           <p class="text-xs sm:text-base mb-4">
